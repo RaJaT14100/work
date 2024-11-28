@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+void sum_of_marks(int marks[], int n) {
+    int sum = 0;
+    for (int i = 0; i < n; i++) {
+        sum += marks[i];
+    }
+    printf("Sum of Marks: %d\n", sum);
+}
+
+int main() {
+    int marks[] = {60, 75, 82, 55, 90};
+    int n = sizeof(marks) / sizeof(marks[0]);
+    sum_of_marks(marks, n);
+    return 0;
+}

@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+void increase_marks(int marks[], int n) {
+    for (int i = 0; i < n; i++) {
+        marks[i] += 5;
+    }
+    printf("Updated Marks: ");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", marks[i]);
+    }
+    printf("\n");
+}
+
+int main() {
+    int marks[] = {60, 75, 82, 55, 90};
+    int n = sizeof(marks) / sizeof(marks[0]);
+    increase_marks(marks, n);
+    return 0;
+}

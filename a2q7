@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+void even_odd_marks(int marks[], int n) {
+    for (int i = 0; i < n; i++) {
+        if (marks[i] % 2 == 0)
+            printf("Mark %d is Even\n", marks[i]);
+        else
+            printf("Mark %d is Odd\n", marks[i]);
+    }
+}
+
+int main() {
+    int marks[] = {60, 75, 82, 55, 90};
+    int n = sizeof(marks) / sizeof(marks[0]);
+    even_odd_marks(marks, n);
+    return 0;
+}

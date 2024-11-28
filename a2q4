@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void count_99(int marks[], int n) {
+    int count = 0;
+    for (int i = 0; i < n; i++) {
+        if (marks[i] == 99) {
+            count++;
+            printf("Student at index %d scored 99\n", i);
+        }
+    }
+    if (count == 0)
+        printf("No student scored 99\n");
+    else
+        printf("Total students who scored 99: %d\n", count);
+}
+
+int main() {
+    int marks[] = {99, 75, 99, 82, 99};
+    int n = sizeof(marks) / sizeof(marks[0]);
+    count_99(marks, n);
+    return 0;
+}

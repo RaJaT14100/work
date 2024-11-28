@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void find_max_min(int marks[], int n) {
+    int max_score = marks[0];
+    int min_score = marks[0];
+    for (int i = 1; i < n; i++) {
+        if (marks[i] > max_score) {
+            max_score = marks[i];
+        }
+        if (marks[i] < min_score) {
+            min_score = marks[i];
+        }
+    }
+    printf("Maximum Score: %d, Minimum Score: %d\n", max_score, min_score);
+}
+
+int main() {
+    int marks[] = {60, 75, 82, 55, 90};
+    int n = sizeof(marks) / sizeof(marks[0]);
+    find_max_min(marks, n);
+    return 0;
+}

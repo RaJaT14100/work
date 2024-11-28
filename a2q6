@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+void average_marks(int marks[], int n) {
+    int sum = 0;
+    for (int i = 0; i < n; i++) {
+        sum += marks[i];
+    }
+    float average = sum / (float)n;
+    printf("Average Marks: %.2f\n", average);
+}
+
+int main() {
+    int marks[] = {60, 75, 82, 55, 90};
+    int n = sizeof(marks) / sizeof(marks[0]);
+    average_marks(marks, n);
+    return 0;
+}
